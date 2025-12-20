@@ -1,190 +1,106 @@
-/* RESET SIMPLE */
+/* =========================
+   RESET GENERAL
+ss========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* STYLE GÉNÉRAL */
+/* =========================
+   STYLE GENERAL
+========================= */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
+    font-family: "Segoe UI", Georgia, "Times New Roman", serif;
+    background-color: #eef1f4;
     padding: 20px;
-    color: #333;
-}
-
-/* TITRES */
-h1, h2 {
-    margin-bottom: 15px;
     color: #2c3e50;
 }
 
-/* LIENS */
+/* =========================
+   TITRES
+========================= */
+h1, h2 {
+    margin-bottom: 15px;
+    color: #1f3a5f;
+    text-align: center;
+}
+
+/* =========================
+   LIENS
+========================= */
 a {
     text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
+    color: #1f3a5f;
+    font-weight: 600;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* TABLE */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
+/* =========================
+   CENTRAGE PAGE (FORMULAIRES)
+========================= */
+.page-center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e3e8ee, #f5f7fa);
 }
 
-table th {
-    background-color: #2c3e50;
-    color: white;
-}
-
-table th, table td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-/* FORMULAIRES */
-form {
-    background-color: #fff;
-    padding: 20px;
-    max-width: 500px;
-    border-radius: 6px;
-}
-
-label {
-    font-weight: bold;
-}
-
-input, select, button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-}
-
-/* BOUTONS */
-button {
-    background-color: #28a745;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-/* MESSAGES */
-.success {
-    color: green;
-    margin-bottom: 10px;
-}
-
-.error {
-    color: red;
-    margin-bottom: 10px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    table, thead, tbody, th, td, tr {
-        font-size: 14px;
-    }
-}
-/* TITRE FORMULAIRE */
-.form-title {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* BOÎTE FORMULAIRE */
+/* =========================
+   BOITE FORMULAIRE
+========================= */
 .form-box {
     width: 100%;
     max-width: 380px;
-    margin: 0 auto;           /* CENTRAGE */
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-}
-
-/* INPUTS */
-.form-box input {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* INPUT FOCUS */
-.form-box input:focus {
-    outline: none;
-    border-color: #007bff;
-}
-
-/* BOUTON */
-.form-box button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007bff;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.form-box button:hover {
-    background-color: #0056b3;
-}
-/* CENTRAGE TOTAL PAGE (COMME LOGIN) */
-.page-center {
-    min-height: 100vh;              /* hauteur écran */
-    display: flex;
-    align-items: center;            /* vertical */
-    justify-content: center;        /* horizontal */
-    background-color: #f4f6f8;
-}
-
-/* FORMULAIRE */
-.form-box {
-    width: 100%;
-    max-width: 360px;
-    background-color: #fff;
+    background-color: #fdfdfd;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     display: flex;
     flex-direction: column;
 }
 
-/* TITRE */
+/* =========================
+   TITRE FORMULAIRE
+========================= */
 .form-title {
     text-align: center;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #1f3a5f;
+    font-weight: bold;
 }
 
-/* INPUTS */
-.form-box input {
+/* =========================
+   INPUTS & SELECT
+========================= */
+.form-box input,
+.form-box select {
+    width: 100%;
     margin-bottom: 15px;
     padding: 12px;
     font-size: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #bfc9d1;
     border-radius: 4px;
+    background-color: #f8f9fa;
 }
 
-/* BOUTON */
+.form-box input:focus,
+.form-box select:focus {
+    outline: none;
+    border-color: #1f3a5f;
+    background-color: #ffffff;
+}
+
+/* =========================
+   BOUTONS
+========================= */
 .form-box button {
     padding: 12px;
-    background-color: #007bff;
+    background-color: #1f3a5f;
     color: white;
     font-size: 16px;
     border: none;
@@ -193,5 +109,69 @@ button:hover {
 }
 
 .form-box button:hover {
-    background-color: #0056b3;
+    background-color: #162c47;
+}
+
+.form-box button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* =========================
+   MESSAGES
+========================= */
+.message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* =========================
+   TABLEAU (INDEX)
+========================= */
+table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #fdfdfd;
+}
+
+th {
+    background-color: #1f3a5f;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #eef3f8;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+
+    .form-box {
+        max-width: 95%;
+    }
 }
